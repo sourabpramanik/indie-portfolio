@@ -8,14 +8,14 @@ function Header() {
   return (
     <div className="header-container">
       <div className="header-wrapper">
-        <a
+        <Link
           href="/"
           onMouseEnter={() => dispatch("hovered")}
           onMouseLeave={dispatch}
           className="logo__wrapper"
         >
           INDIE.
-        </a>
+        </Link>
         <div
           className="menu__wrapper"
           onMouseEnter={() => dispatch("hovered")}
