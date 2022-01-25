@@ -1,0 +1,15 @@
+.mastHead-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--r80);
+}
+.mastHead-section .line {
+  transition: all 0.4s ease-in-out;
+}
+.mastHead-section .title {
+  transition: all 0.4s ease-in-out;
+}
+.mastHead-section .title:hover {
+  color: var(--accent);
+}

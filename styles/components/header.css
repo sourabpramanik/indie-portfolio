@@ -1,0 +1,38 @@
+.header-container {
+  position: fixed;
+  top: 0px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  height: var(--header-h);
+  width: 100%;
+}
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  --indent: clamp(24px, calc((48 / (var(--screen) / 100)) * 1vw), 64px);
+  max-width: calc(1790px + var(--indent) * 2);
+  padding: 0 var(--indent);
+}
+.logo__wrapper {
+  font-size: 20px;
+  letter-spacing: 6px;
+  transition: all 0.4s ease-in-out;
+}
+.logo__wrapper:hover {
+  color: var(--accent);
+}
+.menu__wrapper {
+  width: 15px;
+  height: 15px;
+  background-color: var(--bg100);
+  border-radius: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.menu__wrapper:hover {
+  background-color: var(--accent);
+}
