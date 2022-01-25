@@ -4,7 +4,7 @@ function BrandingSection() {
   return (
     <div className="branding-section pb-r100 pt-r100">
       <div className="page__container">
-        <p className="tagline-text">// What I intend?</p>
+        <p className="tagline-text">/ What I intend?</p>
         <div className="branding__wrapper">
           <div className="svg__wrapper">
             <svg
