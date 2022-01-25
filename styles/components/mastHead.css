@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: var(--r80);
+  padding-top: var(--r200);
 }
 .mastHead-section .line {
   transition: all 0.4s ease-in-out;
@@ -12,4 +12,14 @@
 }
 .mastHead-section .title:hover {
   color: var(--accent);
+}
+.sub-title {
+  letter-spacing: 1px;
+  padding-top: var(--r120);
+}
+.separator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: var(--r72) 0;
 }
