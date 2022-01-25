@@ -59,8 +59,8 @@ function BrandingSection() {
                 x2="469"
                 y2="213.5"
                 stroke="#1F1F1F"
-                stroke-width="3"
-                stroke-dasharray="10 10"
+                strokeWidth="3"
+                strokeDasharray="10 10"
               />
               <line
                 x1="59.5"
@@ -68,8 +68,8 @@ function BrandingSection() {
                 x2="59.5"
                 y2="272"
                 stroke="#1F1F1F"
-                stroke-width="3"
-                stroke-dasharray="10 10"
+                strokeWidth="3"
+                strokeDasharray="10 10"
               />
             </svg>
           </div>
