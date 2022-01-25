@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import Header from "./components/header";
 import CustomCursor from "./components//customCursor";
-import { GlobalProvider } from "./context/globalContext";
+import GlobalProvider from "./context/globalContext";
 
 function MyApp({ Component, pageProps }) {
   return (
