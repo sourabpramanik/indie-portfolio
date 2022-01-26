@@ -38,12 +38,8 @@ function WorkArea() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M41 1L46 6L41 11"
-                      stroke="white"
-                      stroke-width="2"
-                    />
-                    <path d="M46 6H0" stroke="white" stroke-width="2" />
+                    <path d="M41 1L46 6L41 11" stroke="white" strokeWidth="2" />
+                    <path d="M46 6H0" stroke="white" strokeWidth="2" />
                   </svg>
                 </div>
               </div>
@@ -70,12 +66,8 @@ function WorkArea() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M41 1L46 6L41 11"
-                      stroke="white"
-                      stroke-width="2"
-                    />
-                    <path d="M46 6H0" stroke="white" stroke-width="2" />
+                    <path d="M41 1L46 6L41 11" stroke="white" strokeWidth="2" />
+                    <path d="M46 6H0" stroke="white" strokeWidth="2" />
                   </svg>
                 </div>
               </div>
@@ -106,12 +98,8 @@ function WorkArea() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M41 1L46 6L41 11"
-                      stroke="white"
-                      stroke-width="2"
-                    />
-                    <path d="M46 6H0" stroke="white" stroke-width="2" />
+                    <path d="M41 1L46 6L41 11" stroke="white" strokeWidth="2" />
+                    <path d="M46 6H0" stroke="white" strokeWidth="2" />
                   </svg>
                 </div>
               </div>
