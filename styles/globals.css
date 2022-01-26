@@ -3,11 +3,14 @@
 @import url("./components/header.css");
 @import url("./components/customCursor.css");
 @import url("./components/branding.css");
+@import url("./components/workArea.css");
 
 :root {
   --accent: #006ad8;
   --bg100: #fff;
+  --bg150: rgb(175, 175, 175);
   --bg200: #0a0a0a;
+  --bg250: #5f5f5f;
   --bg300: #000;
   --text100: #fff;
   --text200: #000;
@@ -149,6 +152,13 @@ select {
 .t-heading-600 {
   font-family: var(--default-font);
   font-size: clamp(32px, calc((88 / (var(--screen) / 100)) * 1vw), 117px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+.t-heading-600r {
+  font-family: var(--default-font);
+  font-size: clamp(64px, calc((88 / (var(--screen) / 100)) * 1vw), 117px);
   font-weight: 700;
   line-height: 1.18;
   letter-spacing: -0.03em;
@@ -307,7 +317,21 @@ select {
     margin-bottom: 16px;
   }
 }
+/* Custom Scrollbar */
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg250);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg150);
+  transition: all 0.4s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg100);
+}
 .page__container {
   margin-left: auto;
   margin-right: auto;

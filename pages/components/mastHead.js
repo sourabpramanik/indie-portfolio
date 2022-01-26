@@ -32,6 +32,7 @@ function MastHead({ title }) {
           </div>
           <div className="sub-title t-paragraph">
             Passionate about creating user centered designs and committing
+            <br />
             experience to leave lasting impact.
           </div>
           <div className="separator">
