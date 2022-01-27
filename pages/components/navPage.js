@@ -29,10 +29,9 @@ function NavPage() {
         stagger: -0.3,
         delay: -1,
       })
-
       .to("body", 0.2, {
         css: {
-          overflow: "none",
+          overflow: "scroll",
         },
         ease: "power4.inOut",
         stagger: 0.3,

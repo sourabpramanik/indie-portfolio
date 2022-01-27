@@ -80,3 +80,8 @@
 .navpage-close-area {
   z-index: 334;
 }
+@media (max-width: 767px) {
+  .full-width-navpage {
+    height: 100%;
+  }
+}
