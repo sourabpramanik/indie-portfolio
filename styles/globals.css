@@ -4,6 +4,7 @@
 @import url("./components/customCursor.css");
 @import url("./components/branding.css");
 @import url("./components/workArea.css");
+@import url("./components/navPage.css");
 
 :root {
   --accent: #006ad8;
@@ -18,6 +19,7 @@
   --default-font: "Urbanist", sans-serif;
   --screen: 1440;
   --container-padding: 33px;
+  --vh: 6.72px;
   --r-container: clamp(16px, calc((116 / (var(--screen) / 100)) * 1vw), 155px);
   --r-mob-container: clamp(16px, calc((28 / (560 / 100)) * 1vw), 40px);
   --header-h: clamp(76px, calc((124 / (var(--screen) / 100)) * 1vw), 164px);
