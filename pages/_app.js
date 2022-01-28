@@ -9,7 +9,10 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function MyApp({ Component, pageProps }) {
   const progressTrack = useRef();
-  gsap.registerPlugin(ScrollTrigger);
+  if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
   gsap.to(progressTrack.current, {
     value: 100,
     ease: "none",
