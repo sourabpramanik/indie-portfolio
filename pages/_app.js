@@ -5,7 +5,7 @@ import GlobalProvider from "./context/globalContext";
 import NavPage from "./components/navPage";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function MyApp({ Component, pageProps }) {
   const progressTrack = useRef();
