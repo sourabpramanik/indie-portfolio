@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import gsap from "gsap";
 import { useGlobalDispatchContext } from "../context/globalContext";
-// import div from "next/div";
+import Link from "next/link";
 
 function NavPage() {
   const dispatch = useGlobalDispatchContext();
@@ -94,15 +94,14 @@ function NavPage() {
               >
                 <div>
                   <div className="item-shift">
-                    <a
-                      href="/about-us"
-                      className="t-heading-500 l-target"
-                      onMouseEnter={() => dispatch("hovered")}
-                      onMouseLeave={dispatch}
-                    >
-                      About me
-                      <div className="line-indc"></div>
-                    </a>
+                    <Link href="/about-us">
+                      <a className="t-heading-500 l-target"
+                        onClick={()=>closeNav()}
+                        onMouseEnter={()=> dispatch("hovered")} 
+                        onMouseLeave={dispatch}>
+                        About me
+                      </a>              
+                    </Link>
                   </div>
                 </div>
               </li>
