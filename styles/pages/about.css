@@ -1,0 +1,15 @@
+.about-page{
+  height:100vw;
+}
+.about-heading{
+  padding-bottom: var(--r32);
+}
+.about_content-wrapper{
+  max-width:768px;
+}
+
+@media (max-width:768px){
+  .about_content-wrapper{
+    max-width:100%;
+  }
+}

@@ -3,25 +3,11 @@ import Header from "./components/header";
 import CustomCursor from "./components//customCursor";
 import GlobalProvider from "./context/globalContext";
 import NavPage from "./components/navPage";
-import gsap from "gsap";
-import { useEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function MyApp({ Component, pageProps }) {
-  const progressTrack = useRef();
-  if (typeof window !== "undefined") {
-    gsap.registerPlugin(ScrollTrigger);
-  }
-
-  gsap.to(progressTrack.current, {
-    value: 100,
-    ease: "none",
-    scrollTrigger: { scrub: 0.3 },
-  });
   return (
     <div className="app">
       <GlobalProvider>
-        <progress ref={progressTrack} max="100" value="0"></progress>
         <CustomCursor />
         <NavPage />
         <Header />

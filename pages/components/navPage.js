@@ -81,6 +81,7 @@ function NavPage() {
                       onMouseLeave={dispatch}
                     >
                       Home
+                      <div className="line-indc"></div>
                     </span>
                   </div>
                 </div>
@@ -93,13 +94,15 @@ function NavPage() {
               >
                 <div>
                   <div className="item-shift">
-                    <span
+                    <a
+                      href="/about-us"
                       className="t-heading-500 l-target"
                       onMouseEnter={() => dispatch("hovered")}
                       onMouseLeave={dispatch}
                     >
                       About me
-                    </span>
+                      <div className="line-indc"></div>
+                    </a>
                   </div>
                 </div>
               </li>
@@ -117,6 +120,7 @@ function NavPage() {
                       onMouseLeave={dispatch}
                     >
                       Contact me
+                      <div className="line-indc"></div>
                     </span>
                   </div>
                 </div>
@@ -135,12 +139,24 @@ function NavPage() {
                       onMouseLeave={dispatch}
                     >
                       Case Studies
+                      <div className="line-indc"></div>
                     </span>
                   </div>
                 </div>
               </li>
             </ul>
           </nav>
+        </div>
+        <div className="expr-area">
+          <div className="expr-wrapper">
+            <h2 className="t-heading-200r">Indie Expression</h2>
+            <p>
+              Working as a solo designer and developer has created many channels
+              for me to meet new clients, preserve long time partnerships,
+              getting re-hired and sharing feedbacks are the great expression in
+              the end.
+            </p>
+          </div>
         </div>
         <div className="navpage-close-area ">
           <div className="navpage-close-btn">

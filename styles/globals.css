@@ -5,6 +5,7 @@
 @import url("./components/branding.css");
 @import url("./components/workArea.css");
 @import url("./components/navPage.css");
+@import url("./pages/about.css");
 
 :root {
   --accent: #006ad8;
@@ -100,7 +101,7 @@ textarea {
   color: inherit;
 }
 button {
-  cursor: pointer;
+  cursor: none;
   border-color: currentColor;
 }
 button {
@@ -334,30 +335,6 @@ select {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--bg100);
 }
-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 4px;
-  border: none;
-  background: transparent;
-}
-progress::-webkit-progress-bar {
-  background: transparent;
-  border-radius: 22px;
-}
-progress::-webkit-progress-value {
-  background: linear-gradient(270deg, #006ad8 84.9%, rgba(0, 53, 108, 0) 100%);
-  background-attachment: fixed;
-}
-progress::-moz-progress-bar {
-  background: linear-gradient(270deg, #006ad8 84.9%, rgba(0, 53, 108, 0) 100%);
-  background-attachment: fixed;
-}
-
 .page__container {
   margin-left: auto;
   margin-right: auto;
