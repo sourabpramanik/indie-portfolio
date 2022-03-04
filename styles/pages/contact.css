@@ -1,0 +1,10 @@
+.contact_page{
+  height:100%;
+}
+.contact_section-conatiner{
+  display: flex;
+  align-items: center;  
+}
+.contact_l-section{}
+.contact_page-heading{}
+.contact_r-section{}
