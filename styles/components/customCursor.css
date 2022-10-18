@@ -1,32 +1,117 @@
-.cursor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: var(--accent);
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  transition: all 0.1s ease-in-out;
-  transition-property: width, height, border;
-  will-change: width, height, border, transform;
-  pointer-events: none;
+.pointer {
+  position: fixed;
+  top: 0px;
+  left: 0px;
   z-index: 999;
+  contain: layout style size;
+  pointer-events: none; 
+  transition: transform 0.1s ease;
 }
-.hovered {
-  background-color: transparent;
-  width: 25px;
-  height: 25px;
-  border: 2px solid var(--bg100);
-  mix-blend-mode: difference;
+.pointer::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  transition: all 0.1s ease-in-out;
-  transition-property: width, height, border;
-  will-change: width, height, border, transform;
-  pointer-events: none;
+  top: -24px;
+  left: -24px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  transform: scale(0.2);
+  background: var(--accent);
+  border-radius: 50%;
+  transition: transform 0.1s ease;
+}
+.hovered{
+  position: fixed;
+  top: 0px;
+  left: 0px;
   z-index: 999;
+  contain: layout style size;
+  pointer-events: none;
+  transition: transform 0.1s ease;
+}
+
+.hovered::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: block;
+  width: 48px;
+  height: 48px;
+  transform:  translate(-50%, -50%);
+  background: transparent;
+  border-radius: 50%;
+  border: var(--bg100) thin solid;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease;
+}
+
+.nav-body-hovered {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  contain: layout style size;
+  pointer-events: none;
+  transition: transform 0.1s ease;
+  mix-blend-mode: difference;
+}
+.nav-body-hovered::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: block;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  background: var(--bg100);
+  border-radius: 50%;
+  border: var(--bg300) thin solid;  
+  transition: transform 0.1s ease;
+}
+.expand{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  contain: layout style size;
+  pointer-events: none;
+  transition: transform 5s ease;
+  mix-blend-mode: difference;
+}
+.expand::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: block;
+  width: 200px;
+  height: 200px;
+  transform: scale(100);
+  background: var(--bg100);
+  border-radius: 50%;
+  border: var(--bg300) thin solid;
+  transition: transform 5s ease;
+}
+.video-hover{
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: none;
+  transition: transform 0.8s ease;
+  overflow: hidden;
+  mix-blend-mode: exclusion;
+  filter: invert(1);
+}
+/*  */
+.video-hover > video{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  
 }

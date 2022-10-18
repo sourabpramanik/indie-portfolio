@@ -8,7 +8,7 @@ const globalReducer = (state, action) => {
     case "CURSOR_TYPE": {
       return {
         ...state,
-        cursorType: action.cursorType,
+        cursorStyles: action.cursorStyles,
       };
     }
     default: {
@@ -19,14 +19,11 @@ const globalReducer = (state, action) => {
 
 const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(globalReducer, {
-    cursorType: false,
-    cursorStyles: ["pointer", "hovered"],
+    cursorStyles: "poniter",
   });
 
-  const onCursor = (cursorType) => {
-    cursorType =
-      (state.cursorStyles.includes(cursorType) && cursorType) || false;
-    dispatch({ type: "CURSOR_TYPE", cursorType: cursorType });
+  const onCursor = (cursorStyles) => {
+    dispatch({ type: "CURSOR_TYPE", cursorStyles: cursorStyles ?? "pointer" });
   };
   return (
     <GlobalDispatchContext.Provider value={(dispatch, onCursor)}>

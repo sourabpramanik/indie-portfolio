@@ -1,30 +1,29 @@
-import React, { useState, useEffect } from "react";
-import { useGlobalStateContext } from "../context/globalContext";
+import React, { useState, useEffect, useRef } from "react";
+import {
+  useGlobalDispatchContext,
+  useGlobalStateContext,
+} from "../context/globalContext";
+import Cursor from "./utils/cursor";
 
+// const webVideo = require("");
 function CustomCursor() {
-  const [mousePos, setMousePos] = useState({
-    x: 40,
-    y: 40,
-  });
-  const { cursorType } = useGlobalStateContext();
-
-  const onMouseMove = (event) => {
-    const { pageX: x, pageY: y } = event;
-    setMousePos({ x, y });
-  };
-
+  const cursorRef = useRef();
+  const dispatch = useGlobalDispatchContext();
   useEffect(() => {
-    document.addEventListener("mousemove", onMouseMove);
-    return () => {
-      document.removeEventListener("mousemove", onMouseMove);
-    };
+    const cursor = new Cursor(cursorRef.current);
+    cursor.render();
+    dispatch("pointer");
   }, []);
 
+  const { cursorStyles } = useGlobalStateContext();
   return (
-    <div
-      className={`${!!cursorType ? "hovered" : "cursor"}`}
-      style={{ left: `${mousePos.x}px`, top: `${mousePos.y}px` }}
-    ></div>
+    <div className={cursorStyles ?? "pointer"} ref={cursorRef}>
+      {cursorStyles === "video-hover" && (
+        <video loop muted autoPlay>
+          <source src="video/websites.mp4" />
+        </video>
+      )}
+    </div>
   );
 }
 

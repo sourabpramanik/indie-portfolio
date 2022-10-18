@@ -18,7 +18,7 @@ function Header() {
           overflow: "hidden",
         },
         ease: "power4.inOut",
-        stagger: 0.3,
+        //stagger: 0.3,
       })
       .to(".navpage-block", 1, {
         css: {
@@ -34,7 +34,17 @@ function Header() {
         ease: "expo.inOut",
         stagger: 0.3,
       })
+      .to(".expr-area", 0.8, {
+        opacity: "100%",
+        ease: "expo.inOut",
+      })
       .to(".close-btn-link", 0.8, {
+        css: {
+          display: "block",
+        },
+        ease: "expo.inOut",
+      })
+      .to(".theme-dip-btn-link", 0.8, {
         css: {
           display: "block",
         },
@@ -48,7 +58,7 @@ function Header() {
         <Link
           href="/"
           onMouseEnter={() => dispatch("hovered")}
-          onMouseLeave={dispatch}
+          onMouseLeave={() => dispatch("pointer")}
           className="logo__wrapper"
         >
           INDIE.
@@ -56,7 +66,7 @@ function Header() {
         <div
           className="menu__wrapper"
           onMouseEnter={() => dispatch("hovered")}
-          onMouseLeave={dispatch}
+          onMouseLeave={() => dispatch("pointer")}
           onClick={() => toggleNav()}
         ></div>
       </div>

@@ -77,9 +77,9 @@
   align-items: center;
   flex-direction: column;
 }
-.l-target:hover {
+/* .l-target:hover {
   color: var(--accent);
-}
+} */
 .line-indc {
   /* position: absolute; */
   width: 1px;
@@ -110,8 +110,16 @@
   left: 0;
   padding: calc(var(--r-container) / 2);
 }
+.navpage-theme-dip-area {
+  z-index: 334;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: calc(var(--r-container) / 2);
+}
 .expr-area {
   z-index: 334;
+  opacity: 0;
 }
 @media (max-width: 767px) {
   .full-width-navpage {

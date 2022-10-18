@@ -15,7 +15,7 @@ function MastHead({ title }) {
             <span
               className="t-heading-700 title"
               onMouseEnter={() => dispatch("hovered")}
-              onMouseLeave={dispatch}
+              onMouseLeave={() => dispatch("pointer")}
             >
               Designer
             </span>
@@ -25,7 +25,7 @@ function MastHead({ title }) {
             <span
               className="t-heading-700 title"
               onMouseEnter={() => dispatch("hovered")}
-              onMouseLeave={dispatch}
+              onMouseLeave={() => dispatch("pointer")}
             >
               Developer
             </span>
